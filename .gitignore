@@ -1,0 +1,95 @@
+# Python
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+
+.ipynb_checkpoints/
+
+# Python packaging
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing and coverage
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / Editor files
+
+.vscode/
+.idea/
+
+# Operating system files
+
+.DS_Store
+Thumbs.db
+
+# Environment variables and secrets
+
+.env
+.env.*
+!.env.example
+
+# Logs
+
+*.log
+
+# Temporary files
+
+*.tmp
+*.temp
+
+# Data files
+
+# Keep the directory structure and README files,
+
+# but avoid accidentally committing large local datasets.
+
+data/raw/*
+data/processed/*
+
+# Allow README files inside data directories
+
+!data/raw/.gitkeep
+!data/raw/README.md
+!data/processed/.gitkeep
+!data/processed/README.md
+
+# Model artifacts
+
+models/
+*.pkl
+*.pickle
+*.joblib
+
+# Local experiment outputs
+
+outputs/
+artifacts/
+
+# Generated files
+
+*.csv
+*.xlsx
+*.xls
+*.parquet
+
+# Keep project documentation and source files tracked
+
+!docs/
+!notebooks/
+!src/
