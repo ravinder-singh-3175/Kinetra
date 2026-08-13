@@ -2,21 +2,22 @@
 
 ### Personalized Movement & Wellness Intelligence
 
-> A data-driven system designed to understand individual movement and pain-related profiles and provide personalized exercise, safety, and wellness guidance.
+> A data-driven system designed to understand individual movement, pain-related, lifestyle, recovery, and nutritional profiles and provide personalized exercise, nutrition, safety, and wellness guidance.
 
 ---
 
 ## 1. Project Overview
 
-**Kinetra** is a Data Science project focused on developing a personalized movement and wellness system for individuals experiencing common musculoskeletal discomfort.
+**Kinetra** is a Data Science project focused on developing a personalized movement and wellness system for individuals experiencing common musculoskeletal discomfort and seeking general wellness support.
 
-People often search for general exercise advice online when experiencing pain or discomfort. However, generic recommendations may not consider individual factors such as pain characteristics, activity level, lifestyle, sleep, or functional limitations.
+People often search for general exercise, nutrition, and wellness advice online. However, such information may not consider individual factors such as pain characteristics, physical activity level, exercise habits, sleep and recovery, lifestyle, dietary patterns, or other personal circumstances.
 
-Kinetra aims to explore how **Data Science, statistical analysis, machine learning, and recommendation techniques** can be used to make exercise and wellness guidance more personalized and data-driven.
+Kinetra aims to explore how **Data Science, statistical analysis, machine learning, and recommendation techniques** can be used to understand individual profiles and provide more personalized movement, exercise, nutrition, and wellness guidance.
 
-The system is intended as an **educational and wellness-support tool**, not as a medical diagnostic system or replacement for professional medical advice.
+The system is intended as an **educational and wellness-support tool**, not as a medical diagnostic system, medical treatment system, or replacement for professional healthcare or nutritional advice.
 
 ---
+
 
 ## 2. Problem Statement
 
@@ -31,6 +32,7 @@ A person experiencing discomfort may have differences in:
 * Exercise habits
 * Sleep and recovery
 * Lifestyle and work-related factors
+* Dietary patterns and general nutrition-related information
 * Functional limitations
 * Other relevant personal characteristics
 
@@ -82,9 +84,12 @@ Personalized Recommendation
        │
        ├──────────────► Exercise Guidance
        │
+       ├──────────────► Nutrition / Diet Guidance
+       │
        ├──────────────► Precautions / Exercises to Avoid
        │
        └──────────────► Wellness & Recovery Guidance
+
 ```
 
 As the project develops, additional Data Science and machine learning components will be integrated into this workflow.
@@ -192,6 +197,7 @@ Personalized Guidance
 * Data analysis
 * User profile/risk analysis
 * Personalized exercise recommendations
+* Nutrition and diet guidance
 * Exercise precautions
 * Wellness and recovery guidance
 * Exercise information/library
