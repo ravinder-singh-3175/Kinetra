@@ -1,304 +1,390 @@
-# 5. Project Scope
+# Project Scope
 
 ## 5.1 Overview
 
-The scope of Kinetra defines what the project will address, what functionality will be explored, and what limitations will be maintained throughout development.
+The **Mental Wellness & Nutrition Project** is a Data Science-based college student wellness project focused primarily on understanding **mental wellness** and its relationships with nutrition, physical activity/mobility, and other relevant lifestyle factors.
 
-Kinetra is being developed as an educational Data Science and wellness-support project. The project will progressively apply Data Science concepts to understand individual characteristics and pain-related information and explore how these insights can support personalized movement, exercise, and wellness guidance.
+The project uses primary survey data collected from college students and will progressively evolve as concepts from the Fundamentals of Data Science course are introduced.
 
-The scope may be refined as the project progresses and more information becomes available through data analysis and experimentation.
-
----
-
-## 5.2 In-Scope Areas
-
-The following areas are currently considered within the scope of Kinetra.
-
-### 5.2.1 Data Collection and Preparation
-
-The project will investigate suitable data sources and develop processes for:
-
-* Collecting or obtaining relevant data
-* Understanding available variables
-* Cleaning data
-* Handling missing values
-* Transforming data
-* Preparing data for analysis
+The scope is intentionally broad enough to support future statistical analysis, machine learning, pattern discovery, recommendation techniques, and application development while remaining centered on one coherent problem.
 
 ---
 
-### 5.2.2 Exploratory Data Analysis
+## 5.2 Target Population
 
-The project will use statistical summaries and visualizations to investigate patterns in the available data.
+The target population for the project is:
 
-This may include analysis of:
+> **College students**
 
-* Individual characteristics
-* Pain-related information
-* Physical activity
+The project does not currently impose a specific age range.
+
+The initial dataset consists of responses collected through a questionnaire distributed among college students.
+
+Any conclusions drawn from the dataset will consider the characteristics and limitations of the actual sample rather than automatically generalizing findings to all college students.
+
+---
+
+## 5.3 Core Areas of Investigation
+
+The project currently focuses on three major domains.
+
+### 5.3.1 Mental Wellness
+
+Mental wellness is the **primary area of interest**.
+
+The project aims to investigate patterns in students' self-reported mental-wellness information and examine how these patterns relate to other lifestyle characteristics.
+
+Mental-wellness variables will be treated as indicators available within the collected survey data rather than as clinical diagnoses.
+
+---
+
+### 5.3.2 Nutrition Intake
+
+Nutrition is a major lifestyle domain within the project.
+
+The project may investigate:
+
+* Dietary habits
+* Meal-related patterns
+* Food choices
+* Hydration-related behaviour
+* Other nutrition-related variables available in the survey
+
+Nutrition information may be analyzed independently and in relation to mental wellness, physical activity, sleep, and other lifestyle characteristics.
+
+The project will not diagnose nutritional deficiencies or prescribe clinical diets.
+
+---
+
+### 5.3.3 Physical Activity and Mobility
+
+Physical activity and mobility form another important lifestyle domain.
+
+The project may investigate:
+
+* Physical activity levels
 * Exercise habits
-* Lifestyle factors
-* Other relevant variables
+* Movement-related behaviour
+* Sedentary behaviour
+* Mobility-related information represented in the dataset
+
+These characteristics may be studied in relation to mental wellness, nutrition, and other lifestyle factors.
 
 ---
 
-### 5.2.3 Statistical Analysis
+## 5.4 Supporting Lifestyle and Contextual Factors
 
-Appropriate statistical techniques may be used to investigate relationships and patterns within the data.
+Additional variables may contribute to the overall analysis where they are available in the collected dataset.
 
-Depending on the available dataset, this may include:
+Examples may include:
 
-* Descriptive statistics
-* Correlation analysis
-* Hypothesis testing
-* Other appropriate statistical techniques
+* Sleep
+* Daily routine
+* Academic or lifestyle characteristics
+* Relevant demographic information
+* Other contextual factors represented in the questionnaire
 
-The exact techniques will be selected based on the characteristics of the data.
+These factors are not necessarily independent project modules.
+
+Instead, they may provide additional context for understanding relationships among mental wellness, nutrition, and physical activity.
 
 ---
 
-### 5.2.4 Machine Learning
+## 5.5 Data Scope
 
-The project will explore machine-learning techniques where they are relevant to the available data and project objectives.
+The initial project dataset consists of **primary survey responses collected from college students**.
+
+Approximately 100 responses have currently been collected.
+
+The project will progressively address:
+
+* Data understanding
+* Variable documentation
+* Data quality
+* Missing information
+* Data cleaning
+* Data transformation
+* Data exploration
+* Data versioning
+* Feature management
+* Analysis-ready dataset creation
+
+A formal data dictionary will be created after the dataset is inspected.
+
+Raw data will be preserved separately from cleaned and processed data.
+
+Additional data sources may be considered later if they provide a meaningful and justified contribution to the project.
+
+---
+
+## 5.6 Analytical Scope
+
+The project is intended to support multiple levels of Data Science analysis.
+
+### Descriptive Analysis
+
+Understand the characteristics and distributions present in the student survey data.
+
+### Diagnostic Analysis
+
+Investigate relationships and associations among mental wellness, nutrition, physical activity, and other relevant variables.
+
+### Statistical Analysis
+
+Apply appropriate probability and statistical techniques as they are introduced in the course.
+
+### Predictive Analysis
+
+Explore meaningful prediction tasks if suitable target variables can be identified.
+
+### Pattern and Profile Discovery
+
+Investigate whether meaningful student wellness or lifestyle profiles can be discovered using appropriate analytical or unsupervised-learning techniques.
+
+### Prescriptive Analysis
+
+Explore how validated analytical findings may eventually support personalized general wellness insights.
+
+---
+
+## 5.7 Data Science and Machine Learning Scope
+
+As the project progresses, appropriate Data Science and machine-learning techniques may be explored.
 
 Potential areas include:
 
-* Supervised learning
-* Unsupervised learning
-* Classification
-* Regression
-* Clustering
-* Dimensionality reduction
-* Anomaly detection
-
-Not every technique will necessarily be implemented. Techniques will be selected according to their relevance and usefulness to the project.
-
----
-
-### 5.2.5 Personalization
-
-A major component within the scope of Kinetra is personalization.
-
-The project will investigate whether individual characteristics and analytical findings can be used to distinguish between different user profiles or situations.
-
-This may involve:
-
-* Identifying meaningful user groups
-* Understanding differences between individuals
-* Using analytical or predictive results to support personalized guidance
-
----
-
-### 5.2.6 Recommendation and Wellness Guidance
-
-Kinetra may develop a recommendation component that uses available information and analytical findings to provide personalized movement, exercise, and wellness guidance.
-
-Potential guidance may include:
-
-* Suitable movement or exercise suggestions
-* Exercise-related precautions
-* Activity-level guidance
-* Recovery and wellness suggestions
-
-The recommendation approach will depend on the available data and results obtained during the Data Science process.
-
----
-
-### 5.2.7 Application Development
-
-The Data Science workflow may eventually be integrated into a usable application.
-
-The application may include:
-
-```text
-User Input
-     ↓
-Assessment
-     ↓
-Data Processing
-     ↓
-Analysis / Prediction
-     ↓
-Personalized Guidance
-```
-
-The exact interface and application architecture will be developed progressively as the Data Science components become available.
-
----
-
-### 5.2.8 Advanced Movement Analysis
-
-As an advanced extension, the project may explore computer vision and pose-estimation techniques for movement analysis.
-
-This could potentially be used to:
-
-* Detect body or exercise poses
-* Analyze movement patterns
-* Provide exercise-form feedback
-
-This is considered an advanced extension and will depend on time, available resources, and the feasibility of integrating computer-vision techniques with the core system.
-
----
-
-## 5.3 Out-of-Scope Areas
-
-The following areas are outside the intended scope of Kinetra.
-
-### Medical Diagnosis
-
-Kinetra will not attempt to diagnose medical conditions.
-
-### Determining the Medical Cause of Pain
-
-The system will not attempt to determine the clinical or medical cause of an individual's pain.
-
-### Medical Treatment
-
-The project will not prescribe medication or provide medical treatment plans.
-
-### Replacement of Healthcare Professionals
-
-Kinetra is not intended to replace doctors, physiotherapists, or other qualified healthcare professionals.
-
-### Unsupported Clinical Claims
-
-The project will not make clinical claims that are not supported by appropriate evidence.
-
-### Fully Autonomous Medical Decision-Making
-
-The system will not be designed to independently make high-stakes medical decisions.
-
----
-
-## 5.4 Technical Scope
-
-From a Data Science perspective, the project may cover multiple stages of the Data Science workflow.
-
-These may include:
-
-```text
-Problem Understanding
-        ↓
-Data Understanding
-        ↓
-Data Preparation
-        ↓
-Exploratory Analysis
-        ↓
-Statistical Analysis
-        ↓
-Machine Learning
-        ↓
-Evaluation
-        ↓
-Recommendation
-        ↓
-Application
-```
-
-The project will progressively implement these components as the relevant concepts are covered in the Fundamentals of Data Science course.
-
----
-
-## 5.5 Learning Scope
-
-Kinetra is also intended to demonstrate the practical application of concepts from the Fundamentals of Data Science course.
-
-The project may provide opportunities to apply:
-
-* Data Science processes
-* Descriptive analytics
-* Diagnostic analytics
-* Predictive analytics
-* Prescriptive analytics
 * Probability and statistics
-* Data preparation
-* Exploratory Data Analysis
+* Correlation and covariance
+* Sampling and estimation
+* Hypothesis testing
+* ANOVA
 * Data visualization
-* Feature engineering
-* Supervised learning
-* Unsupervised learning
+* Feature extraction
+* Feature construction
+* Feature selection
 * Dimensionality reduction
+* Regression
+* Classification
+* Decision Trees
+* Random Forest
+* Support Vector Machines
+* k-Nearest Neighbors
+* Clustering
+* Principal Component Analysis
+* t-SNE
 * Association rule mining
 * Anomaly detection
-* Recommendation systems
 * Model evaluation
-* DataOps
-* Introductory MLOps concepts
+* Recommendation techniques
 
-These techniques will only be incorporated where they have a meaningful connection to the project.
+These techniques are **within the learning and experimental scope of the project**.
 
----
+However, inclusion in this section does not mean that every technique must become part of the final application.
 
-## 5.6 Scope Flexibility
-
-The scope of Kinetra is intentionally flexible during the early stages of development.
-
-This is because the final dataset, prediction targets, analytical techniques, and recommendation approach cannot be determined reliably before the available data has been investigated.
-
-Therefore, the project may:
-
-* Add relevant techniques when justified by the data
-* Remove techniques that are not useful
-* Refine the recommendation mechanism
-* Modify the application design
-* Extend the project with advanced features where feasible
-
-Any major changes to the scope will be documented as the project progresses.
+Each technique will be evaluated for its suitability to the available data and analytical problem.
 
 ---
 
-## 5.7 Minimum Viable Project
+## 5.8 Data Engineering Scope
 
-To ensure that the project remains achievable, Kinetra will maintain a core set of objectives that can form the minimum viable system.
+As relevant concepts are introduced, the project may progressively include:
 
-The minimum viable project is expected to include:
+* Data extraction
+* Data ingestion
+* Data cleaning
+* Data exploration
+* Data wrangling
+* Data transformation
+* Dataset versioning
+* Feature management
+* Data pipeline design
+* Data cataloging concepts
+* Relational database usage
+* Batch-processing concepts
+* Streaming-ingestion concepts
+* Data warehouse, data lake, and cloud concepts
 
-1. A clearly defined Data Science problem
-2. A suitable dataset
-3. Data preparation
-4. Exploratory Data Analysis
-5. Appropriate statistical or analytical methods
-6. At least one meaningful Data Science model or analytical approach
-7. Evaluation of the developed approach
-8. A basic personalized guidance or recommendation mechanism
-9. Documentation of the complete workflow
+Some of these topics may be implemented directly where appropriate.
 
-Advanced features such as computer vision and pose estimation will be treated as extensions rather than mandatory components.
+Others may be represented through architectural analysis or scalability considerations if implementing them would not be meaningful for the size and nature of the project.
 
----
-
-## 5.8 Scope and Project Boundaries
-
-The scope of Kinetra is designed to maintain a balance between technical ambition and project feasibility.
-
-The project aims to demonstrate a complete Data Science workflow while avoiding unnecessary expansion into areas that would require clinical validation, extensive medical expertise, or resources beyond the intended educational project.
-
-The focus will therefore remain on:
-
-**Data → Analysis → Insights → Personalization → Guidance**
-
-within clearly defined educational and wellness-support boundaries.
+The project will not artificially create unnecessary infrastructure simply to claim that a technology was used.
 
 ---
 
-## 5.9 Expected Outcome
+## 5.9 Personalized Wellness Guidance
 
-Within the defined scope, Kinetra aims to demonstrate how Data Science can be applied to a real-world personalization problem.
+A future objective of the project is to explore personalized and explainable **general wellness guidance**.
 
-The final outcome is expected to be a working prototype or application supported by a documented Data Science workflow.
+Potential guidance may relate to:
 
-The project should demonstrate not only the final application but also the reasoning and analytical process used to develop it.
+* Nutrition and dietary habits
+* Physical activity
+* Sleep and routine
+* General lifestyle behaviours associated with wellness
 
-This includes documenting:
+The recommendation mechanism has not yet been finalized.
 
-* The problem
-* Objectives
-* Data Science process
-* Analytics approach
-* Project scope
-* Challenges
-* Data and analysis
-* Models or analytical techniques
-* Evaluation
-* Final recommendations
+It may eventually incorporate analytical findings, student profiles, recommendation techniques, and carefully selected external wellness knowledge.
+
+Any external guidance source used by the system should be documented and appropriately credible.
+
+Recommendations will remain educational and general wellness-oriented.
+
+---
+
+## 5.10 Application Scope
+
+Later stages of the project may integrate the analytical components into an interactive application.
+
+A future application may allow students to:
+
+* Provide relevant wellness and lifestyle information
+* Receive an understandable representation of their profile
+* View relevant patterns or analytical findings
+* Understand factors contributing to generated results
+* Receive personalized general wellness insights
+
+The exact interface, software architecture, deployment platform, and technology stack have not yet been finalized.
+
+The application will be designed around the Data Science components rather than determining the analysis based on a predetermined application design.
+
+---
+
+## 5.11 Explainability Scope
+
+Explainability is considered an important project requirement.
+
+Where appropriate, the system should communicate:
+
+* What was observed
+* Which variables were involved
+* Which factors contributed to an analytical result
+* How reliable or uncertain a result may be
+* Why a particular insight or recommendation is being presented
+* What limitations apply
+
+This is especially important because the project involves mental-wellness and lifestyle information.
+
+---
+
+## 5.12 DataOps and MLOps Scope
+
+DataOps and introductory MLOps concepts may progressively support project organization and reproducibility.
+
+Potential practices include:
+
+* Structured repository organization
+* Dataset versioning
+* Reproducible preprocessing
+* Reusable source code
+* Experiment documentation
+* Model versioning
+* Evaluation tracking
+* Reproducible analytical workflows
+
+The level of implementation will remain appropriate to the scale of the project.
+
+---
+
+## 5.13 R and Data Analysis Tools
+
+The project may use **R** for appropriate statistical and data-analysis tasks as the relevant course unit is introduced.
+
+R-based analysis may complement analysis performed using other tools.
+
+The objective is to demonstrate meaningful application of the course material rather than duplicate every analysis unnecessarily across multiple programming languages.
+
+---
+
+## 5.14 Current Core Scope
+
+At the present stage, the immediate scope is limited to:
+
+1. Finalizing the revised project foundation.
+2. Documenting the survey and collected variables.
+3. Understanding the approximately 100 collected responses.
+4. Creating a data dictionary.
+5. Identifying data-quality issues.
+6. Preparing for future cleaning and analysis.
+
+Advanced statistical analysis, machine learning, recommendation systems, and application development remain **future stages**.
+
+---
+
+## 5.15 Future Expansion
+
+The project architecture is intentionally designed to allow expansion as the course progresses.
+
+Potential future capabilities include:
+
+```text id="53xdwa"
+Student Input
+      ↓
+Wellness Profile
+      ↓
+Mental Wellness Analysis
+      +
+Nutrition Analysis
+      +
+Physical Activity Analysis
+      ↓
+Cross-Domain Pattern Analysis
+      ↓
+Predictive / Profile Analysis
+      ↓
+Explainable Insights
+      ↓
+Personalized General Wellness Guidance
+```
+
+Additional features may be introduced if they strengthen the central project objective and can be supported by appropriate data and methods.
+
+---
+
+## 5.16 Out-of-Scope Areas
+
+The project is **not intended to**:
+
+* Diagnose mental-health disorders
+* Diagnose depression, anxiety, eating disorders, or other clinical conditions
+* Diagnose nutritional deficiencies
+* Provide psychological or psychiatric treatment
+* Prescribe medication
+* Provide medical nutrition therapy
+* Prescribe therapeutic diets
+* Replace qualified medical, mental-health, or nutrition professionals
+* Make unsupported causal claims from observational data
+* Present machine-learning predictions as clinical diagnoses
+
+The project will remain within **Data Science, educational analysis, and general wellness-support boundaries**.
+
+---
+
+## 5.17 Scope Management Principle
+
+New technologies or techniques should not be added simply because they appear impressive.
+
+A proposed addition should answer at least one of the following questions:
+
+> **Does it help us understand the collected student data?**
+
+> **Does it help us investigate the relationship between lifestyle and mental wellness?**
+
+> **Does it improve the quality, reliability, explainability, or reproducibility of our analysis?**
+
+> **Does it meaningfully improve the eventual student wellness experience?**
+
+> **Does it allow us to appropriately demonstrate an important FDS concept?**
+
+If the answer to all of these is no, the feature should probably not be added.
+
+---
+
+## 5.18 Summary
+
+The project scope can currently be summarized as:
+
+> **Collect college-student wellness data → understand and prepare the data → analyze mental wellness and its relationships with nutrition, physical activity, and lifestyle → discover meaningful patterns → progressively apply Data Science techniques → generate explainable insights → eventually support personalized general wellness guidance.**
+
+This scope provides enough flexibility for the project to grow throughout the semester while maintaining a consistent central objective.

@@ -1,230 +1,420 @@
-# 3. Data Science Process
+# Data Science Process
 
 ## 3.1 Overview
 
-Kinetra will follow a structured Data Science process to progress from understanding the problem to developing and evaluating a data-driven solution.
+The **Mental Wellness & Nutrition Project** will follow an iterative Data Science process to investigate wellness and lifestyle patterns among college students.
 
-The project will follow the major stages of the Data Science workflow and will be developed incrementally throughout the semester.
+The project currently focuses on three major areas:
 
-The process can be represented as:
+* Mental wellness
+* Nutrition intake and dietary habits
+* Physical activity and mobility
 
-```text
-Business / Problem Understanding
-              ↓
-       Data Understanding
-              ↓
-        Data Preparation
-              ↓
-           Modeling
-              ↓
-          Evaluation
-              ↓
-         Deployment
+Additional lifestyle and contextual variables, such as sleep and daily routine, may also be considered where they are available in the collected data.
+
+Rather than treating Data Science as a single sequence of analysis and modeling steps, the project will progressively move through problem understanding, data collection, data preparation, analysis, modeling, evaluation, and eventual application development.
+
+The process is **iterative**. Findings at later stages may require earlier decisions to be reconsidered.
+
+---
+
+## 3.2 Problem Understanding
+
+The first stage is to clearly define the problem being investigated.
+
+The primary area of interest is **mental wellness among college students**.
+
+Nutrition intake and physical activity/mobility are major lifestyle domains whose relationships with mental wellness will be investigated using collected data.
+
+The central Data Science question is:
+
+> **How can Data Science be used to analyze mental wellness, nutrition intake, physical activity, and related lifestyle characteristics among college students in order to identify meaningful patterns and support personalized wellness insights?**
+
+At this stage, the project does not assume that one lifestyle factor directly causes another outcome.
+
+Instead, relationships and patterns will be investigated using appropriate analytical methods.
+
+---
+
+## 3.3 Data Collection
+
+The project uses **primary survey data collected from college students**.
+
+A questionnaire has been developed containing questions related to areas such as:
+
+* Mental wellness
+* Nutrition and dietary habits
+* Physical activity and mobility
+* Sleep and daily routine
+* Other relevant lifestyle or contextual characteristics
+
+Approximately **100 responses** have currently been collected.
+
+The survey responses represent the project's initial real-world dataset.
+
+As development continues, the data-collection process will be documented, including:
+
+* Questionnaire structure
+* Variables collected
+* Response formats
+* Data types
+* Data limitations
+* Privacy considerations
+* Potential sampling and response biases
+
+---
+
+## 3.4 Data Understanding
+
+Before performing statistical analysis or machine learning, the collected dataset must first be understood.
+
+This stage will involve examining:
+
+* Number of observations
+* Number of variables
+* Meaning of each variable
+* Variable data types
+* Possible response categories
+* Missing values
+* Duplicate responses where relevant
+* Unusual or inconsistent values
+* Distribution of responses
+* Representation of different wellness domains
+
+A **data dictionary** will be developed to document each variable and its role.
+
+Variables may be organized conceptually into:
+
+```text id="r7ph1o"
+Student Survey Data
+        │
+        ├── Context / Demographic Variables
+        │
+        ├── Mental Wellness Variables
+        │
+        ├── Nutrition Variables
+        │
+        ├── Physical Activity / Mobility Variables
+        │
+        └── Other Lifestyle Variables
 ```
 
-These stages are not necessarily strictly linear. Findings from later stages may require returning to earlier stages and refining the problem, data, or approach.
+The exact classification will be determined after formal inspection of the dataset.
 
 ---
 
-## 3.2 Stage 1 — Business / Problem Understanding
+## 3.5 Data Preparation
 
-The first stage is to understand the real-world problem and define what the project is intended to accomplish.
+Raw survey responses may not be immediately suitable for analysis.
 
-### Application to Kinetra
+The data-preparation stage may include:
 
-Kinetra focuses on the problem of providing more personalized movement and wellness guidance to individuals whose needs may differ from generic exercise recommendations.
+* Removing irrelevant technical fields where appropriate
+* Handling missing information
+* Checking duplicate or inconsistent records
+* Standardizing response formats
+* Encoding categorical responses
+* Correcting data-type inconsistencies
+* Detecting unusual values
+* Transforming variables where justified
+* Preparing analysis-ready datasets
 
-At this stage, the project focuses on:
+The project will preserve the distinction between:
 
-* Understanding the problem
-* Identifying the target users
-* Defining project objectives
-* Identifying the expected outcomes
-* Establishing project boundaries and limitations
+```text id="k5zdb3"
+Raw Data
+    ↓
+Cleaned Data
+    ↓
+Processed / Analysis-Ready Data
+```
 
-The outcome of this stage is a clearly defined Data Science problem.
-
----
-
-## 3.3 Stage 2 — Data Understanding
-
-Once the problem has been defined, the next stage is to determine what data is required to address it.
-
-### Application to Kinetra
-
-Potential data may include information related to:
-
-* Individual characteristics
-* Pain characteristics
-* Physical activity
-* Exercise habits
-* Sleep and recovery
-* Lifestyle factors
-* Functional limitations
-* Exercise-related information
-
-The project will investigate available data sources and determine which variables are relevant.
-
-This stage will also involve examining:
-
-* Data structure
-* Variable types
-* Data distributions
-* Missing values
-* Potential inconsistencies
-* Possible relationships between variables
+Raw responses should remain unchanged so that data-processing steps can be reproduced and verified.
 
 ---
 
-## 3.4 Stage 3 — Data Preparation
+## 3.6 Exploratory Data Analysis
 
-Raw data may not be directly suitable for analysis or machine learning.
+Exploratory Data Analysis will be used to understand the structure and characteristics of the collected dataset.
 
-The data preparation stage will therefore involve activities such as:
+Potential analysis may include:
 
-* Data cleaning
-* Handling missing values
-* Identifying inconsistencies
-* Handling relevant outliers
-* Data transformation
-* Encoding categorical variables where required
-* Feature construction
-* Feature selection
-* Preparing appropriate datasets for analysis and modeling
-
-The exact preparation techniques will depend on the characteristics of the selected dataset.
-
----
-
-## 3.5 Stage 4 — Modeling
-
-After the data has been prepared, appropriate analytical and machine-learning techniques can be explored.
-
-Depending on the problem and available data, Kinetra may investigate:
-
-### Statistical approaches
-
-* Descriptive statistics
+* Summary statistics
+* Frequency distributions
+* Histograms
+* Bar charts
+* Box plots
+* Scatterplots
 * Correlation analysis
-* Hypothesis testing
-* Other appropriate statistical methods
+* Comparison of relevant groups
+* Examination of relationships among wellness variables
 
-### Supervised learning
+EDA may be performed separately for:
 
-* Regression
-* Classification
-* Decision Trees
-* Random Forest
-* Support Vector Machines
-* k-Nearest Neighbors
+### Mental Wellness
 
-### Unsupervised learning
+To understand patterns in self-reported mental-wellness variables.
 
-* K-Means
-* Hierarchical Clustering
-* DBSCAN
-* Other appropriate clustering approaches
+### Nutrition
 
-### Additional techniques
+To understand dietary and nutrition-related behaviours.
 
-* Dimensionality reduction
-* Association rule mining
-* Anomaly detection
-* Recommendation techniques
+### Physical Activity and Mobility
 
-Not every technique will necessarily be used in the same part of the system. Each technique will be evaluated according to its relevance to the available data and project objective.
+To understand movement, activity, and mobility-related patterns.
+
+### Cross-Domain Analysis
+
+To explore possible relationships among mental wellness, nutrition, physical activity, sleep, and other relevant lifestyle characteristics.
+
+Exploratory findings will guide later statistical and modeling decisions.
 
 ---
 
-## 3.6 Stage 5 — Evaluation
+## 3.7 Statistical Analysis
 
-The results produced by analytical and machine-learning approaches need to be evaluated before being used in the final system.
+As probability and statistics concepts are introduced in the course, appropriate methods will be applied to the collected dataset.
+
+Potential areas include:
+
+* Probability and distributions
+* Measures of expectation and variation
+* Covariance
+* Correlation
+* Sampling concepts
+* Point and interval estimation
+* Confidence intervals
+* Hypothesis testing
+* t-tests
+* Chi-square tests
+* Z-tests
+* F-tests
+* ANOVA
+
+Statistical tests will only be used when their assumptions and the available data make them appropriate.
+
+The project will distinguish between **statistical association and causal inference**.
+
+---
+
+## 3.8 Feature Engineering
+
+After the original variables are understood, additional features may be constructed where they have meaningful interpretations.
+
+Potential examples could include combined or derived representations of:
+
+* Dietary behaviour
+* Physical activity
+* Sleep/routine
+* Mental-wellness responses
+* Broader lifestyle patterns
+
+These are only conceptual possibilities at the current stage.
+
+No composite wellness score or derived feature will be created simply for convenience. Its construction should have a clear analytical justification.
+
+Feature extraction, construction, selection, learning, and dimensionality-reduction techniques will be explored as the relevant course concepts are introduced.
+
+---
+
+## 3.9 Modeling
+
+Machine-learning models will be introduced only after the dataset has been prepared and an appropriate analytical problem has been identified.
+
+Potential modeling tasks may include:
+
+### Supervised Learning
+
+If a meaningful target variable can be identified, supervised methods may be investigated for classification or regression.
+
+Multiple suitable algorithms may be compared rather than selecting a model in advance.
+
+### Unsupervised Learning
+
+Clustering and related techniques may be used to investigate whether meaningful wellness or lifestyle profiles naturally occur among students.
+
+### Dimensionality Reduction
+
+Dimensionality-reduction methods may later be explored to understand complex relationships among multiple variables and support visualization or modeling.
+
+### Association Analysis
+
+Association-rule techniques may be explored where the representation of the data makes such analysis meaningful.
+
+### Anomaly Detection
+
+Anomaly-detection techniques may be investigated to identify unusual data patterns or observations where appropriate.
+
+The exact modeling strategy will be determined by the data and project requirements.
+
+---
+
+## 3.10 Evaluation
+
+Analytical methods and models will be evaluated using techniques appropriate to their purpose.
 
 Evaluation may include:
 
-* Model performance
-* Prediction quality
-* Comparison between different approaches
+* Statistical significance and uncertainty
+* Model performance metrics
+* Comparison between alternative models
 * Clustering evaluation
-* Recommendation quality
 * Interpretability
-* Robustness
-* Limitations and potential sources of error
+* Stability of results
+* Practical usefulness
+* Limitations and possible bias
 
-The evaluation criteria will be selected according to the specific task being evaluated.
+A model will not be considered useful only because it produces a high numerical performance score.
 
-For example, a classification model and a clustering model require different evaluation approaches.
+Results must also be interpretable and appropriate for the project's wellness context.
 
 ---
 
-## 3.7 Stage 6 — Deployment
+## 3.11 Personalized Wellness Insights
 
-The final stage is to integrate the validated Data Science components into a usable application.
+Later stages of the project may use analytical findings, identified patterns, and student profiles to generate personalized **general wellness insights**.
 
-The planned system may eventually provide:
+Potential areas of guidance may include:
 
-```text
-User Input
-    ↓
-Assessment
-    ↓
-Data Processing
-    ↓
-Analysis / Prediction
-    ↓
-Personalized Recommendation
-    ↓
-User-facing Guidance
+* Nutrition and dietary habits
+* Physical activity
+* Sleep and routine
+* General lifestyle behaviours that may support mental wellness
+
+The recommendation mechanism will only be designed after the relevant analytical foundations have been established.
+
+Recommendations will remain:
+
+* Educational
+* Explainable
+* General wellness-oriented
+* Non-diagnostic
+* Non-clinical
+
+---
+
+## 3.12 Application Development
+
+Once the analytical components are sufficiently developed and evaluated, they may be integrated into an application.
+
+A future application may allow a student to:
+
+```text id="9md00p"
+Provide Wellness Information
+          ↓
+Receive Profile Analysis
+          ↓
+View Relevant Patterns
+          ↓
+Understand Important Factors
+          ↓
+Receive General Wellness Insights
 ```
 
-Deployment may also involve applying appropriate DataOps and introductory MLOps practices as the project develops.
+The exact application design and technology stack have not yet been finalized.
+
+The Data Science analysis will be developed before committing to the final application architecture.
 
 ---
 
-## 3.8 Iterative Nature of the Process
+## 3.13 DataOps and MLOps Perspective
 
-The Data Science process is expected to be iterative rather than strictly one-directional.
+DataOps and introductory MLOps concepts provide a framework for thinking about how the project can remain organized and reproducible as it grows.
+
+Relevant practices may eventually include:
+
+* Dataset versioning
+* Separation of raw and processed data
+* Reproducible preprocessing
+* Organized analytical notebooks
+* Reusable source code
+* Model versioning
+* Experiment tracking
+* Documentation of analytical decisions
+* Reproducible evaluation
+* Consistent project structure
+
+These practices will be introduced progressively rather than implementing unnecessary infrastructure at the beginning of the project.
+
+---
+
+## 3.14 Iterative Nature of the Project
+
+The Data Science process is not strictly linear.
 
 For example:
 
-```text
+```text id="h7wzt5"
 Problem Understanding
+        ↓
+Data Collection
         ↓
 Data Understanding
         ↓
 Data Preparation
         ↓
+Analysis
+        ↓
 Modeling
         ↓
 Evaluation
+        ↓
+Insights / Application
         │
-        └───────────────┐
-                        ↓
-               Refine Earlier Stage
-                        │
-                        ↓
-                  New Evaluation
+        └──────────────► Revisit Earlier Stages
 ```
 
-A model may reveal that additional data is required. Data exploration may reveal that the original problem definition needs refinement. Evaluation may show that a particular modeling approach is unsuitable.
+Exploratory analysis may reveal problems with collected variables.
 
-Therefore, Kinetra will be refined continuously as new findings are obtained.
+Statistical analysis may suggest new features.
+
+Model evaluation may show that a target or feature is unsuitable.
+
+Recommendation development may reveal the need for additional information.
+
+Therefore, earlier stages may be revisited whenever justified.
 
 ---
 
-## 3.9 Connection with Project Development
+## 3.15 Relationship with Data Science Methodologies
 
-The project will progressively move through these stages as the relevant concepts are covered in the Fundamentals of Data Science course.
+The project will use concepts from Data Science process methodologies taught in the course to guide its development.
 
-### Current Stage — Week 1
+**CRISP-DM** provides a useful general structure through problem understanding, data understanding, data preparation, modeling, evaluation, and eventual deployment.
 
-The project is currently focused on:
+**SEMMA** provides another perspective particularly relevant to sampling, exploration, modification, modeling, and assessment.
 
-* Problem understanding
-* Project objectives
-* Initial scope
-* Analytics framework
-* Data Science process
-* Initial challenges and limitations
+Other lifecycle methodologies introduced in the course will be studied and mapped to the project as they are covered.
 
-Future stages will be documented and implemented as the project progresses.
+The project will not treat these methodologies as competing checklists. Instead, their relevant ideas will be used to understand and organize the development process.
+
+---
+
+## 3.16 Current Project Stage
+
+The project is currently transitioning from **problem understanding and data collection** into **data understanding**.
+
+Completed or currently established:
+
+* Revised project problem defined
+* College students identified as the target population
+* Mental wellness established as the primary area of interest
+* Nutrition and physical activity/mobility established as major related lifestyle domains
+* Survey questionnaire developed
+* Approximately 100 responses collected
+* Initial repository structure established
+
+Not yet completed:
+
+* Formal dataset inspection
+* Data dictionary
+* Data cleaning
+* Exploratory Data Analysis
+* Statistical analysis
+* Feature engineering
+* Machine-learning modeling
+* Student profile discovery
+* Recommendation system
+* Final application
+
+The immediate next Data Science task will be to formally inspect and document the collected survey dataset before beginning analysis.

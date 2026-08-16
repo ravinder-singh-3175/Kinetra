@@ -1,303 +1,291 @@
-# Kinetra
+# Mental Wellness & Nutrition Project
 
-### Personalized Movement & Wellness Intelligence
+### Data-Driven Wellness Analysis for College Students
 
-> A data-driven system designed to understand individual movement, pain-related, lifestyle, recovery, and nutritional profiles and provide personalized exercise, nutrition, safety, and wellness guidance.
+> **Temporary Project Name** — The final project name will be decided as the project develops.
 
 ---
 
 ## 1. Project Overview
 
-**Kinetra** is a Data Science project focused on developing a personalized movement and wellness system for individuals experiencing common musculoskeletal discomfort and seeking general wellness support.
+The **Mental Wellness & Nutrition Project** is a semester-long Fundamentals of Data Science project focused on understanding wellness patterns among **college students**.
 
-People often search for general exercise, nutrition, and wellness advice online. However, such information may not consider individual factors such as pain characteristics, physical activity level, exercise habits, sleep and recovery, lifestyle, dietary patterns, or other personal circumstances.
+The project primarily investigates **mental wellness** and its relationships with important lifestyle factors, particularly:
 
-Kinetra aims to explore how **Data Science, statistical analysis, machine learning, and recommendation techniques** can be used to understand individual profiles and provide more personalized movement, exercise, nutrition, and wellness guidance.
+* Nutrition and dietary habits
+* Physical activity and mobility
+* Sleep and daily routine
+* Other relevant lifestyle and contextual factors available in the collected data
 
-The system is intended as an **educational and wellness-support tool**, not as a medical diagnostic system, medical treatment system, or replacement for professional healthcare or nutritional advice.
+The project uses **primary survey data collected from college students**. Approximately 100 responses have currently been collected, providing an initial real-world dataset for analysis.
+
+Rather than beginning with predetermined conclusions, the project will use Data Science and statistical techniques to investigate what patterns, relationships, and associations are actually supported by the collected data.
 
 ---
-
 
 ## 2. Problem Statement
 
-Generic online exercise recommendations are usually not personalized to an individual's characteristics and circumstances.
+College students often experience variations in mental wellness due to a combination of academic, social, behavioural, nutritional, and lifestyle factors.
 
-A person experiencing discomfort may have differences in:
+Nutrition and physical activity are particularly important areas of interest because they form part of students' everyday lifestyles and may be associated with differences in mental wellness.
 
-* Pain location
-* Pain intensity
-* Pain duration
-* Physical activity level
-* Exercise habits
-* Sleep and recovery
-* Lifestyle and work-related factors
-* Dietary patterns and general nutrition-related information
-* Functional limitations
-* Other relevant personal characteristics
+However, these relationships are complex and cannot be understood reliably through assumptions alone.
 
-These differences can affect what type of movement or exercise guidance may be appropriate.
+The central problem addressed by this project is therefore:
 
-The project therefore aims to investigate how a Data Science-based system can use relevant user information to understand patterns, assess user profiles, and generate personalized movement and wellness guidance.
+> **How can Data Science be used to analyze college students' mental wellness, nutrition intake, physical activity, and related lifestyle factors to discover meaningful patterns and support personalized wellness insights?**
+
+The project will investigate associations present in the data without automatically interpreting those associations as causal relationships.
 
 ---
 
-## 3. Project Objectives
+## 3. Core Project Domains
 
-### Primary Objective
+The project is organized around three closely connected domains.
 
-To develop a data-driven personalized movement and wellness system that analyzes relevant user characteristics and provides tailored exercise and wellness guidance.
+### Mental Wellness
 
-### Supporting Objectives
+Mental wellness is the primary area of interest.
 
-* Identify and collect relevant data for the problem.
-* Understand patterns and relationships within the collected data.
-* Apply descriptive and diagnostic analytics.
-* Develop predictive approaches where appropriate.
-* Explore different machine learning techniques.
-* Develop a personalized recommendation mechanism.
-* Provide understandable and interpretable results.
-* Evaluate the performance of analytical and machine learning approaches.
-* Explore advanced movement-analysis capabilities using computer vision.
-* Develop a usable application as the project progresses.
+The project will analyze available self-reported wellness-related information to understand patterns and differences among college students.
+
+The system is **not intended to diagnose mental-health disorders**.
+
+### Nutrition Intake
+
+Nutrition-related information will be analyzed to understand dietary behaviours and their relationships with mental wellness and other lifestyle characteristics.
+
+The project may investigate patterns such as meal habits, dietary choices, hydration, and other nutrition-related factors represented in the collected survey data.
+
+### Physical Activity and Mobility
+
+Physical activity and mobility-related information will be used to understand students' movement and activity patterns and how they relate to mental wellness and nutrition.
 
 ---
 
-## 4. Proposed System
+## 4. Current Data Source
 
-The planned high-level workflow is:
+The initial dataset is being created through a questionnaire distributed among college students.
 
-```text
-User Information
-       │
-       ▼
-Pain / Situation Assessment
-       │
-       ▼
-Safety Screening
-       │
-       ▼
-User Profile / Risk Analysis
-       │
-       ▼
-Personalized Recommendation
-       │
-       ├──────────────► Exercise Guidance
-       │
-       ├──────────────► Nutrition / Diet Guidance
-       │
-       ├──────────────► Precautions / Exercises to Avoid
-       │
-       └──────────────► Wellness & Recovery Guidance
+At present, approximately **100 responses** have been collected.
 
-```
+The survey contains questions related to areas such as:
 
-As the project develops, additional Data Science and machine learning components will be integrated into this workflow.
+* Mental wellness
+* Nutrition and dietary habits
+* Physical activity and mobility
+* Lifestyle and routine
+* Relevant demographic or contextual information
+
+The exact variables, data types, and analytical roles of individual questions will be documented after the survey dataset is formally inspected and prepared.
+
+Raw survey responses will be preserved separately from cleaned and processed versions of the dataset.
 
 ---
 
 ## 5. Data Science Approach
 
-Kinetra will progressively follow a Data Science workflow throughout the semester.
+The project will progressively evolve alongside the **Fundamentals of Data Science** course.
 
-The project will explore:
+Relevant concepts will be applied when they become appropriate to the project's current development stage.
 
+The project is expected to explore areas including:
+
+* Data Science methodologies and processes
 * Data collection and data quality
-* Data preparation and cleaning
-* Exploratory Data Analysis (EDA)
-* Data visualization
 * Probability and statistics
+* Sampling and estimation
+* Correlation and covariance
 * Hypothesis testing
+* ANOVA
+* Data cleaning and preprocessing
+* Exploratory Data Analysis
+* Data visualization
+* Data pipelines and transformation
 * Feature engineering
 * Supervised machine learning
 * Unsupervised machine learning
+* Clustering
 * Dimensionality reduction
-* Association analysis
+* Association rule mining
 * Anomaly detection
-* Recommendation systems
 * Model evaluation
+* Recommendation systems
 * DataOps and introductory MLOps concepts
+* Statistical analysis using R
 
-The exact techniques used at each stage will be determined as the project develops and as the relevant concepts are covered in the course.
+Not every technique will automatically become part of the final application. Multiple techniques may instead be experimentally compared and evaluated where appropriate.
 
 ---
 
 ## 6. Analytics Framework
 
-The project will explore all four major types of analytics:
+The project will progressively demonstrate the four major types of analytics.
 
 ### Descriptive Analytics
 
-**What is happening?**
+**What is happening in the collected student data?**
 
-Examples may include analyzing:
+Examples may include:
 
-* Pain intensity distributions
-* Pain locations
-* Activity levels
-* Sleep/recovery patterns
-* Other user characteristics
+* Distribution of wellness-related responses
+* Nutrition and dietary patterns
+* Physical activity patterns
+* Sleep and lifestyle characteristics
+* Differences among groups represented in the dataset
 
 ### Diagnostic Analytics
 
-**What patterns or factors are associated with the observed outcomes?**
+**What factors or patterns are associated with the observations?**
 
-Potential investigations may include relationships between:
+Potential investigations may include:
 
-* Activity and reported pain
-* Sleep and reported pain
-* Pain duration and pain intensity
-* Lifestyle characteristics and user profiles
+* Nutrition habits and mental wellness
+* Physical activity and mental wellness
+* Sleep and mental wellness
+* Relationships among nutrition, activity, and lifestyle characteristics
 
-Associations will not automatically be interpreted as causal relationships.
+Observed associations will **not automatically be interpreted as causal relationships**.
 
 ### Predictive Analytics
 
-**What can be predicted from the available information?**
+**What meaningful outcomes can be predicted using the available information?**
 
-Potentially:
+Potential predictive targets will only be selected after the dataset has been explored and an appropriate problem has been identified.
 
-```text
-User Characteristics
-        │
-        ▼
-Predictive Model
-        │
-        ▼
-Predicted User Profile / Risk Category
-```
-
-The exact prediction target will be finalized after the data is understood and prepared.
+The project will not prematurely select a machine-learning algorithm or prediction target.
 
 ### Prescriptive Analytics
 
-**What action or recommendation may be appropriate?**
+**How can analytical findings eventually support useful wellness guidance?**
+
+Later stages of the project may explore a recommendation mechanism that converts relevant analytical findings and user profiles into understandable, personalized general wellness insights.
+
+---
+
+## 7. Proposed High-Level System
 
 ```text
-User Profile
-     │
-     ▼
-Analysis / Prediction
-     │
-     ▼
-Recommendation Mechanism
-     │
-     ▼
-Personalized Guidance
+Student Wellness Information
+          │
+          ▼
+Data Validation & Preparation
+          │
+          ▼
+ ┌────────┼─────────┐
+ ▼        ▼         ▼
+Mental   Nutrition  Physical Activity
+Wellness  Profile   / Mobility Profile
+Profile
+ └────────┼─────────┘
+          ▼
+Integrated Wellness Analysis
+          │
+          ▼
+Statistical & Data Science Analysis
+          │
+          ▼
+Pattern / Profile Identification
+          │
+          ▼
+Explainable Wellness Insights
+          │
+          ▼
+Personalized General Wellness Guidance
 ```
 
----
-
-## 7. Planned Project Components
-
-### Core Components
-
-* User and pain-related assessment
-* Safety-oriented screening
-* Data analysis
-* User profile/risk analysis
-* Personalized exercise recommendations
-* Nutrition and diet guidance
-* Exercise precautions
-* Wellness and recovery guidance
-* Exercise information/library
-* Explainable results
-
-### Data Science Components
-
-As the course progresses, the project may incorporate:
-
-* Statistical analysis
-* Regression
-* Classification
-* Decision trees
-* Random Forest
-* SVM
-* k-NN
-* Clustering
-* PCA
-* t-SNE
-* Association rule mining
-* Anomaly detection
-* Recommendation techniques
-* Model evaluation
-
-### Advanced Component
-
-A future extension will explore **camera-based exercise analysis**, potentially using pose estimation and movement analysis to provide feedback on exercise form.
+This architecture represents the current project direction and may evolve as additional Data Science concepts are learned and the dataset is better understood.
 
 ---
 
-## 8. Project Development Approach
+## 8. Planned Development
 
-The project will be developed incrementally throughout the semester.
+The project will be developed progressively throughout the semester.
 
 ```text
-Project Definition
-       ↓
-Data Understanding
-       ↓
-Data Preparation
-       ↓
-Exploratory Analysis
-       ↓
-Statistical Analysis
-       ↓
+Project Redefinition
+        ↓
+Survey & Data Understanding
+        ↓
+Data Documentation
+        ↓
+Data Cleaning and Preparation
+        ↓
+Exploratory Data Analysis
+        ↓
+Probability & Statistical Analysis
+        ↓
+Data Engineering
+        ↓
 Feature Engineering
-       ↓
-Machine Learning
-       ↓
-Model Evaluation
-       ↓
+        ↓
+Machine Learning Experiments
+        ↓
+Clustering & Profile Discovery
+        ↓
+Advanced Data Analysis
+        ↓
 Recommendation System
-       ↓
+        ↓
 Application Development
-       ↓
-Advanced Movement Analysis
+        ↓
+Evaluation & Final Documentation
 ```
 
-Each stage will be developed as the corresponding Data Science concepts are covered in the course.
+The project's GitHub history will reflect this progression rather than presenting the final system as if it were developed all at once.
 
 ---
 
 ## 9. Current Status
 
-### Week 1 — Project Foundation
+### Project Redefinition & Data Collection Stage
 
-Current work focuses on:
+The project has recently evolved from its original movement/pain-oriented concept into a broader college-student wellness project centered on:
 
-* Defining the real-world problem
-* Establishing project objectives
-* Understanding the Data Science process
-* Identifying the role of different types of analytics
-* Defining the initial project scope
-* Identifying potential Data Science challenges
-* Establishing the initial repository structure
+* Mental wellness
+* Nutrition intake
+* Physical activity and mobility
 
-**No machine learning model or final dataset has been implemented at this stage.**
+Current progress includes:
+
+* Revised problem domain identified
+* College students selected as the target population
+* Survey questionnaire prepared
+* Approximately 100 responses collected
+* Initial Data Science project structure established
+* Future development aligned with the FDS course progression
+
+The collected dataset has **not yet been formally cleaned, analyzed, modeled, or used to generate conclusions**.
+
+No machine-learning results are being claimed at this stage.
 
 ---
 
-## 10. Safety and Ethical Boundary
+## 10. Safety and Ethical Boundaries
 
-Kinetra is being developed as an educational Data Science and wellness-support project.
+This project is being developed as an **educational Data Science and general wellness project**.
 
-The system will **not** be designed to:
+It is not intended to:
 
-* Diagnose medical conditions
-* Determine the medical cause of pain
+* Diagnose depression, anxiety, or other mental-health conditions
+* Diagnose nutritional deficiencies or eating disorders
+* Provide psychological or psychiatric treatment
 * Prescribe medication
-* Replace doctors, physiotherapists, or other qualified professionals
-* Make unsupported clinical claims
+* Provide medical nutrition therapy or therapeutic diets
+* Replace qualified healthcare or mental-health professionals
+* Treat statistical associations as proof of causation
+* Present machine-learning predictions as medical diagnoses
 
-Safety considerations and appropriate limitations will be considered throughout development.
+Survey data should be handled responsibly, with appropriate attention to privacy, anonymization, and ethical use.
+
+Any future recommendations will be limited to **general educational and wellness-oriented guidance**.
 
 ---
 
 ## 11. Repository Structure
 
 ```text
-Kinetra/
+Mental-Wellness-Nutrition-Project/
 │
 ├── README.md
 │
@@ -321,32 +309,27 @@ Kinetra/
 └── .gitignore
 ```
 
----
-
-## 12. Future Direction
-
-As the project progresses, Kinetra will evolve from a project definition into a complete Data Science workflow.
-
-Future stages will involve:
-
-1. Identifying and collecting suitable data
-2. Data cleaning and preparation
-3. Exploratory and statistical analysis
-4. Feature engineering
-5. Machine learning experimentation
-6. User/pain profile analysis
-7. Personalized recommendation development
-8. Model evaluation
-9. Application development
-10. Exploration of computer-vision-based movement analysis
-
-The final scope will depend on the results of the analysis, available data, course progression, and project evaluation.
+The repository structure will expand progressively as data preparation, analysis, modeling, recommendation, and application-development stages begin.
 
 ---
 
-## 13. Team
+## 12. Project Philosophy
 
-**Project:** Kinetra
-**Course:** Fundamentals of Data Science
-**Development:** Team Project
-**Current Phase:** Week 1 — Project Foundation
+The project will remain technically honest throughout its development.
+
+The following principles will guide the work:
+
+* Use real collected data wherever possible
+* Do not invent results or analytical conclusions
+* Do not select algorithms simply to claim that they were used
+* Apply course concepts where they have meaningful roles
+* Compare alternative techniques where appropriate
+* Clearly document limitations
+* Distinguish association from causation
+* Keep analytical conclusions explainable
+* Maintain responsible boundaries around mental wellness and nutrition
+* Allow the project architecture to evolve as understanding of the data improves
+
+---
+
+**Current Phase:** Project Redefinition & Initial Data Collection

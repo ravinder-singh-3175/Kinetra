@@ -93,3 +93,7 @@ artifacts/
 !docs/
 !notebooks/
 !src/
+
+# Private / raw survey data
+data/raw/
+data/private/

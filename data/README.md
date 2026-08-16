@@ -1,130 +1,134 @@
-# Kinetra Data
+# Data Directory
 
-## 1. Purpose
+## Overview
 
-The `data/` directory contains the datasets used by the Kinetra Data Science project.
+This directory is intended to contain datasets used by the **Mental Wellness & Nutrition Project**.
 
-The data will be used for activities such as:
+The project currently uses **primary survey data collected from college students**. Approximately 100 responses have been collected so far.
 
-* Data understanding
-* Data preparation
-* Exploratory Data Analysis
-* Statistical analysis
-* Machine learning
-* Model evaluation
-* Development of personalized guidance
+The questionnaire contains information related to areas such as:
+
+* Mental wellness
+* Nutrition and dietary habits
+* Physical activity and mobility
+* Sleep and daily routine
+* Other relevant lifestyle or contextual characteristics
+
+The exact variables and their analytical roles will be documented after formal inspection of the collected dataset.
 
 ---
 
-## 2. Data Organization
+## Planned Data Organization
 
-As the project develops, the data directory may be organized into different stages:
+As the project develops, the data directory may be organized into separate stages such as:
 
-```text
+```text id="3plwpc"
 data/
 │
 ├── raw/
-│   └── Original, unmodified data
-│
 ├── processed/
-│   └── Cleaned and transformed data
-│
 └── README.md
 ```
 
-The exact organization may be adjusted depending on the dataset and project requirements.
+### `raw/`
+
+Contains the original collected data before analytical modifications.
+
+Raw data should remain unchanged so that all preprocessing steps can be reproduced.
+
+### `processed/`
+
+Contains cleaned, transformed, encoded, or otherwise analysis-ready versions of the dataset.
+
+Processed datasets should be generated through documented and reproducible data-preparation steps whenever possible.
 
 ---
 
-## 3. Raw Data
+## Data Dictionary
 
-The `raw/` directory is intended for the original dataset obtained from the selected data source.
+A data dictionary will be created after the survey dataset is formally inspected.
 
-Raw data should not be manually modified.
+It will document information such as:
 
-Keeping the original data unchanged helps maintain:
-
-* Reproducibility
-* Data provenance
-* Transparency
-* The ability to repeat the data-preparation process
-
----
-
-## 4. Processed Data
-
-The `processed/` directory is intended for data that has been cleaned and transformed for analysis or modeling.
-
-Processing may include:
-
-* Handling missing values
-* Removing or handling duplicate records
-* Correcting inconsistent values
-* Encoding categorical variables
-* Feature engineering
-* Feature selection
-* Scaling or transformation where appropriate
-
-The exact processing steps will be documented as the project progresses.
-
----
-
-## 5. Dataset Selection
-
-The final dataset has not yet been selected.
-
-Once a suitable dataset is identified, this README will be updated with relevant information such as:
-
-* Dataset name
-* Source
-* Dataset description
-* Number of observations
-* Number of variables
-* Data format
-* License or usage conditions
+* Variable name
+* Original survey question
+* Wellness domain
+* Description
+* Data type
+* Possible values or categories
+* Missing-value representation
+* Intended analytical role
+* Transformations or encoding applied
 * Relevant limitations
 
----
+Variables may be grouped into categories such as:
 
-## 6. Data Privacy
-
-Kinetra may involve information related to physical activity, pain, lifestyle, or other potentially sensitive areas.
-
-Therefore:
-
-* Unnecessary personally identifiable information should not be included.
-* Data should be handled responsibly.
-* Applicable privacy and data-protection requirements should be considered.
-* Dataset licensing and usage conditions should be respected.
-
-Where possible, datasets should be anonymized or appropriately de-identified.
-
----
-
-## 7. Data Reproducibility
-
-The project should preserve the relationship between the original data and the processed data.
-
-Data-processing operations should preferably be performed through reproducible code rather than manual modification.
-
-The objective is to ensure that:
-
-```text
-Raw Data
-   ↓
-Data Preparation
-   ↓
-Processed Data
-   ↓
-Analysis / Modeling
+```text id="9i3cv2"
+Context / Demographic
+Mental Wellness
+Nutrition
+Physical Activity / Mobility
+Other Lifestyle Factors
 ```
 
-can be reproduced when required.
+The final grouping will depend on the actual questionnaire and collected dataset.
 
 ---
 
-## 8. Current Status
+## Data Preparation
 
-At the current stage of the project, the final dataset has not yet been added.
+Future data-preparation work may include:
 
-This directory will be updated once the data source has been selected and the Data Science workflow progresses to the data-handling stage.
+* Data-quality assessment
+* Missing-value analysis
+* Duplicate checking
+* Data-type correction
+* Category standardization
+* Outlier investigation
+* Categorical encoding
+* Data transformation
+* Feature construction
+* Dataset versioning
+
+No cleaning or transformation should overwrite the original raw dataset.
+
+---
+
+## Privacy and Repository Policy
+
+The survey contains student wellness and lifestyle information.
+
+Therefore, participant privacy must be considered before any dataset is published.
+
+**Raw identifiable or potentially sensitive survey responses should not be uploaded to the public GitHub repository.**
+
+Before publishing any dataset, the project should check for:
+
+* Names
+* Email addresses
+* Student identifiers
+* Contact information
+* Automatically collected identifying metadata
+* Free-text responses containing identifying information
+* Combinations of variables that could unnecessarily expose individual participants
+
+Where appropriate, data should be anonymized or de-identified before being shared publicly.
+
+The Git repository may therefore contain documentation and processing code without containing the private raw dataset itself.
+
+---
+
+## Current Status
+
+Current data status:
+
+* Survey questionnaire created
+* Approximately 100 responses collected
+* Primary dataset available
+* Formal dataset inspection not yet completed
+* Data dictionary not yet created
+* Data cleaning not yet performed
+* Processed dataset not yet created
+* Exploratory Data Analysis not yet performed
+
+The next data-related stage will be to inspect the collected survey dataset, document its variables, and assess its quality before beginning formal analysis.
