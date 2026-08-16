@@ -166,8 +166,8 @@ Conclusion / Next Steps
 
 ## 9. Current Status
 
-At the current stage of the project, the final dataset has not yet been selected and analytical notebooks have not yet been created.
+At the current stage of the project, the primary survey dataset has been collected and the project is transitioning into the **data-understanding stage**.
 
-The notebooks will be added progressively as the Kinetra Data Science workflow advances.
+Analytical notebooks have not yet been created.
 
-The first notebooks will be created after the appropriate dataset and analysis requirements have been established.
+The first notebooks will be added progressively as the collected dataset is formally inspected, documented, prepared, and analyzed.
