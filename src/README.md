@@ -1,8 +1,8 @@
-# Kinetra Source Code
+# Mental Wellness & Nutrition Project — Source Code
 
 ## 1. Purpose
 
-The `src/` directory contains the reusable source code used to develop and operate the Kinetra Data Science system.
+The `src/` directory contains the reusable source code used to develop and operate the Mental Wellness & Nutrition Project Data Science system.
 
 While the `notebooks/` directory will primarily be used for experimentation and analysis, the `src/` directory will contain more structured and reusable project components.
 

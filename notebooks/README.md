@@ -1,8 +1,8 @@
-# Kinetra Notebooks
+# Mental Wellness & Nutrition Project — Notebooks
 
 ## 1. Purpose
 
-The `notebooks/` directory contains Jupyter notebooks used for experimentation, exploration, analysis, visualization, and development during the Kinetra Data Science project.
+The `notebooks/` directory contains Jupyter notebooks used for experimentation, exploration, analysis, visualization, and development during the Mental Wellness & Nutrition Project.
 
 Notebooks will be used to investigate the dataset and develop analytical approaches before integrating finalized logic into the project's source code.
 
